@@ -45,37 +45,6 @@ namespace ValenciaSustainability
                 LoadTvsOn();
                 LoadParkingLightsOn();
 
-                //// Select One Record From Database and load into DropDownLists
-                //SelectAuditorNameFromAuditRecord();
-                //SelectCampusFromAuditRecord();
-                //SelectBuildingFromAuditRecord();
-                //SelectRoomNumberFromAuditRecord();
-                //SelectAuditTypeFromAuditRecord();
-                //SelectComputersOnFromAuditRecord();
-                //SelectTvsOnFromAuditRecord();
-                //SelectProjectorsOnFromAuditRecord();
-                //SelectLightsOnFromAuditRecord();
-                //SelectParkingLotFromAuditRecord();
-                //SelectSprinklerZoneFromAuditRecord();
-                //SelectDateFromAuditRecord();
-                //SelectDateFromAuditRecord();
-
-
-                //// Select One Record From Database and load into CheckBoxLists
-                //SelectCheckBoxListsFromAuditRecord();
-
-                //// Select One Record From Database and load into TextBox's
-                //SelectKitchenTextBoxValueFromAuditRecord();
-                //SelectTempTextBoxValueFromAuditRecord();
-                //SelectIrrigationTextBoxValueFromAuditRecord();
-                //SelectAhuTextBoxValueFromAuditRecord();
-                //SelectParkingLightsTextBoxValueFromAuditRecord();
-                //SelectLabTextBoxValueFromAuditRecord();
-                //SelectMarqueeTextBoxValueFromAuditRecord();
-                //SelectOtherTextBoxValueFromAuditRecord();
-                //SelectEnergyCostTextBoxValueFromAuditRecord();
-
-
                 // Select Records Based On Selected AuditID in GridView
                 // Select One Record From Database and load into DropDownLists
                 SelectAuditorNameFromAuditRecord2();
