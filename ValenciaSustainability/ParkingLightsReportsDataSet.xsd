@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ParkingLightsReportsDataSet" targetNamespace="http://tempuri.org/ParkingLightsReportsDataSet.xsd" xmlns:mstns="http://tempuri.org/ParkingLightsReportsDataSet.xsd" xmlns="http://tempuri.org/ParkingLightsReportsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValenciaSustainabilityDatabaseConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValenciaSustainabilityDatabaseConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuditTableAdapter" GeneratorDataComponentClassName="AuditTableAdapter" Name="Audit" UserDataComponentName="AuditTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" DbObjectName="ValenciaSustainabilityDatabase.dbo.Audit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AuditDate, AuditName, CampusName, LotName, SecurityMode, Locked, LightsOnDayTime, LightsOnNightTime, BrokenBulb, ParkingLightsOther, NumberLightsOn, EnergyUsed, ParkingLightsNotes, OtherNotes
+FROM     Audit</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AuditDate" DataSetColumn="AuditDate" />
+              <Mapping SourceColumn="AuditName" DataSetColumn="AuditName" />
+              <Mapping SourceColumn="CampusName" DataSetColumn="CampusName" />
+              <Mapping SourceColumn="LotName" DataSetColumn="LotName" />
+              <Mapping SourceColumn="SecurityMode" DataSetColumn="SecurityMode" />
+              <Mapping SourceColumn="Locked" DataSetColumn="Locked" />
+              <Mapping SourceColumn="LightsOnDayTime" DataSetColumn="LightsOnDayTime" />
+              <Mapping SourceColumn="LightsOnNightTime" DataSetColumn="LightsOnNightTime" />
+              <Mapping SourceColumn="BrokenBulb" DataSetColumn="BrokenBulb" />
+              <Mapping SourceColumn="ParkingLightsOther" DataSetColumn="ParkingLightsOther" />
+              <Mapping SourceColumn="NumberLightsOn" DataSetColumn="NumberLightsOn" />
+              <Mapping SourceColumn="EnergyUsed" DataSetColumn="EnergyUsed" />
+              <Mapping SourceColumn="ParkingLightsNotes" DataSetColumn="ParkingLightsNotes" />
+              <Mapping SourceColumn="OtherNotes" DataSetColumn="OtherNotes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ParkingLightsReportsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ParkingLightsReportsDataSet" msprop:Generator_UserDSName="ParkingLightsReportsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Audit" msprop:Generator_TableClassName="AuditDataTable" msprop:Generator_TableVarName="tableAudit" msprop:Generator_RowChangedName="AuditRowChanged" msprop:Generator_TablePropName="Audit" msprop:Generator_RowDeletingName="AuditRowDeleting" msprop:Generator_RowChangingName="AuditRowChanging" msprop:Generator_RowEvHandlerName="AuditRowChangeEventHandler" msprop:Generator_RowDeletedName="AuditRowDeleted" msprop:Generator_RowClassName="AuditRow" msprop:Generator_UserTableName="Audit" msprop:Generator_RowEvArgName="AuditRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AuditDate" msprop:Generator_ColumnVarNameInTable="columnAuditDate" msprop:Generator_ColumnPropNameInRow="AuditDate" msprop:Generator_ColumnPropNameInTable="AuditDateColumn" msprop:Generator_UserColumnName="AuditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuditName" msprop:Generator_ColumnVarNameInTable="columnAuditName" msprop:Generator_ColumnPropNameInRow="AuditName" msprop:Generator_ColumnPropNameInTable="AuditNameColumn" msprop:Generator_UserColumnName="AuditName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CampusName" msprop:Generator_ColumnVarNameInTable="columnCampusName" msprop:Generator_ColumnPropNameInRow="CampusName" msprop:Generator_ColumnPropNameInTable="CampusNameColumn" msprop:Generator_UserColumnName="CampusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LotName" msprop:Generator_ColumnVarNameInTable="columnLotName" msprop:Generator_ColumnPropNameInRow="LotName" msprop:Generator_ColumnPropNameInTable="LotNameColumn" msprop:Generator_UserColumnName="LotName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecurityMode" msprop:Generator_ColumnVarNameInTable="columnSecurityMode" msprop:Generator_ColumnPropNameInRow="SecurityMode" msprop:Generator_ColumnPropNameInTable="SecurityModeColumn" msprop:Generator_UserColumnName="SecurityMode" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Locked" msprop:Generator_ColumnVarNameInTable="columnLocked" msprop:Generator_ColumnPropNameInRow="Locked" msprop:Generator_ColumnPropNameInTable="LockedColumn" msprop:Generator_UserColumnName="Locked" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LightsOnDayTime" msprop:Generator_ColumnVarNameInTable="columnLightsOnDayTime" msprop:Generator_ColumnPropNameInRow="LightsOnDayTime" msprop:Generator_ColumnPropNameInTable="LightsOnDayTimeColumn" msprop:Generator_UserColumnName="LightsOnDayTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LightsOnNightTime" msprop:Generator_ColumnVarNameInTable="columnLightsOnNightTime" msprop:Generator_ColumnPropNameInRow="LightsOnNightTime" msprop:Generator_ColumnPropNameInTable="LightsOnNightTimeColumn" msprop:Generator_UserColumnName="LightsOnNightTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BrokenBulb" msprop:Generator_ColumnVarNameInTable="columnBrokenBulb" msprop:Generator_ColumnPropNameInRow="BrokenBulb" msprop:Generator_ColumnPropNameInTable="BrokenBulbColumn" msprop:Generator_UserColumnName="BrokenBulb" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ParkingLightsOther" msprop:Generator_ColumnVarNameInTable="columnParkingLightsOther" msprop:Generator_ColumnPropNameInRow="ParkingLightsOther" msprop:Generator_ColumnPropNameInTable="ParkingLightsOtherColumn" msprop:Generator_UserColumnName="ParkingLightsOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NumberLightsOn" msprop:Generator_ColumnVarNameInTable="columnNumberLightsOn" msprop:Generator_ColumnPropNameInRow="NumberLightsOn" msprop:Generator_ColumnPropNameInTable="NumberLightsOnColumn" msprop:Generator_UserColumnName="NumberLightsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="EnergyUsed" msprop:Generator_ColumnVarNameInTable="columnEnergyUsed" msprop:Generator_ColumnPropNameInRow="EnergyUsed" msprop:Generator_ColumnPropNameInTable="EnergyUsedColumn" msprop:Generator_UserColumnName="EnergyUsed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParkingLightsNotes" msprop:Generator_ColumnVarNameInTable="columnParkingLightsNotes" msprop:Generator_ColumnPropNameInRow="ParkingLightsNotes" msprop:Generator_ColumnPropNameInTable="ParkingLightsNotesColumn" msprop:Generator_UserColumnName="ParkingLightsNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherNotes" msprop:Generator_ColumnVarNameInTable="columnOtherNotes" msprop:Generator_ColumnPropNameInRow="OtherNotes" msprop:Generator_ColumnPropNameInTable="OtherNotesColumn" msprop:Generator_UserColumnName="OtherNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

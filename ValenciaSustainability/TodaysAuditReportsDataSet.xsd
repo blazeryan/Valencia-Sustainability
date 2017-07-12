@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TodaysAuditReportsDataSet" targetNamespace="http://tempuri.org/TodaysAuditReportsDataSet.xsd" xmlns:mstns="http://tempuri.org/TodaysAuditReportsDataSet.xsd" xmlns="http://tempuri.org/TodaysAuditReportsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValenciaSustainabilityDatabaseConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValenciaSustainabilityDatabaseConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuditTableAdapter" GeneratorDataComponentClassName="AuditTableAdapter" Name="Audit" UserDataComponentName="AuditTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" DbObjectName="ValenciaSustainabilityDatabase.dbo.Audit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AuditDate, AuditName, CampusName, BuildingName, RoomName, LotName, Filter, AHUWaterLeak, AirLeak, Noise, VFD, InHand, Error, AHUOther, ComputersOn, TvsOn, ProjectorsOn, LabLightsOn, LabOther, 
+HeadAdjustment, BrokenHead, IrrigationOnDayTime, IrrigationOnNightTime, ManualOverride, IrrigationWaterLeak, IrrigationOther, SecurityMode, Locked, LightsOnDayTime, LightsOnNightTime, BrokenBulb, 
+                  ParkingLightsOther, TempTooCold, TempTooHot, ThermostatBroken, TempOther, MarqueeOnDayTime, MarqueeOnNightTime, BrokenPixels, MarqueeOther, WaterRunning, KitchenWaterLeak, KitchenLightsOn, 
+                  FridgeOpen, FreezerOpen, KitchenOther, NumberComputersOn, NumberTvsOn, NumberProjectorsOn, NumberLightsOn, EnergyUsed, AHUNotes, ComputerLabNotes, TemperatureNotes, KitchenNotes, 
+                  ParkingLightsNotes, MarqueeNotes, IrrigationNotes, OtherNotes
+FROM     Audit
+WHERE  (AuditDate = { fn CURDATE() } )</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AuditDate" DataSetColumn="AuditDate" />
+              <Mapping SourceColumn="AuditName" DataSetColumn="AuditName" />
+              <Mapping SourceColumn="CampusName" DataSetColumn="CampusName" />
+              <Mapping SourceColumn="BuildingName" DataSetColumn="BuildingName" />
+              <Mapping SourceColumn="RoomName" DataSetColumn="RoomName" />
+              <Mapping SourceColumn="LotName" DataSetColumn="LotName" />
+              <Mapping SourceColumn="Filter" DataSetColumn="Filter" />
+              <Mapping SourceColumn="AHUWaterLeak" DataSetColumn="AHUWaterLeak" />
+              <Mapping SourceColumn="AirLeak" DataSetColumn="AirLeak" />
+              <Mapping SourceColumn="Noise" DataSetColumn="Noise" />
+              <Mapping SourceColumn="VFD" DataSetColumn="VFD" />
+              <Mapping SourceColumn="InHand" DataSetColumn="InHand" />
+              <Mapping SourceColumn="Error" DataSetColumn="Error" />
+              <Mapping SourceColumn="AHUOther" DataSetColumn="AHUOther" />
+              <Mapping SourceColumn="ComputersOn" DataSetColumn="ComputersOn" />
+              <Mapping SourceColumn="TvsOn" DataSetColumn="TvsOn" />
+              <Mapping SourceColumn="ProjectorsOn" DataSetColumn="ProjectorsOn" />
+              <Mapping SourceColumn="LabLightsOn" DataSetColumn="LabLightsOn" />
+              <Mapping SourceColumn="LabOther" DataSetColumn="LabOther" />
+              <Mapping SourceColumn="HeadAdjustment" DataSetColumn="HeadAdjustment" />
+              <Mapping SourceColumn="BrokenHead" DataSetColumn="BrokenHead" />
+              <Mapping SourceColumn="IrrigationOnDayTime" DataSetColumn="IrrigationOnDayTime" />
+              <Mapping SourceColumn="IrrigationOnNightTime" DataSetColumn="IrrigationOnNightTime" />
+              <Mapping SourceColumn="ManualOverride" DataSetColumn="ManualOverride" />
+              <Mapping SourceColumn="IrrigationWaterLeak" DataSetColumn="IrrigationWaterLeak" />
+              <Mapping SourceColumn="IrrigationOther" DataSetColumn="IrrigationOther" />
+              <Mapping SourceColumn="SecurityMode" DataSetColumn="SecurityMode" />
+              <Mapping SourceColumn="Locked" DataSetColumn="Locked" />
+              <Mapping SourceColumn="LightsOnDayTime" DataSetColumn="LightsOnDayTime" />
+              <Mapping SourceColumn="LightsOnNightTime" DataSetColumn="LightsOnNightTime" />
+              <Mapping SourceColumn="BrokenBulb" DataSetColumn="BrokenBulb" />
+              <Mapping SourceColumn="ParkingLightsOther" DataSetColumn="ParkingLightsOther" />
+              <Mapping SourceColumn="TempTooCold" DataSetColumn="TempTooCold" />
+              <Mapping SourceColumn="TempTooHot" DataSetColumn="TempTooHot" />
+              <Mapping SourceColumn="ThermostatBroken" DataSetColumn="ThermostatBroken" />
+              <Mapping SourceColumn="TempOther" DataSetColumn="TempOther" />
+              <Mapping SourceColumn="MarqueeOnDayTime" DataSetColumn="MarqueeOnDayTime" />
+              <Mapping SourceColumn="MarqueeOnNightTime" DataSetColumn="MarqueeOnNightTime" />
+              <Mapping SourceColumn="BrokenPixels" DataSetColumn="BrokenPixels" />
+              <Mapping SourceColumn="MarqueeOther" DataSetColumn="MarqueeOther" />
+              <Mapping SourceColumn="WaterRunning" DataSetColumn="WaterRunning" />
+              <Mapping SourceColumn="KitchenWaterLeak" DataSetColumn="KitchenWaterLeak" />
+              <Mapping SourceColumn="KitchenLightsOn" DataSetColumn="KitchenLightsOn" />
+              <Mapping SourceColumn="FridgeOpen" DataSetColumn="FridgeOpen" />
+              <Mapping SourceColumn="FreezerOpen" DataSetColumn="FreezerOpen" />
+              <Mapping SourceColumn="KitchenOther" DataSetColumn="KitchenOther" />
+              <Mapping SourceColumn="NumberComputersOn" DataSetColumn="NumberComputersOn" />
+              <Mapping SourceColumn="NumberTvsOn" DataSetColumn="NumberTvsOn" />
+              <Mapping SourceColumn="NumberProjectorsOn" DataSetColumn="NumberProjectorsOn" />
+              <Mapping SourceColumn="NumberLightsOn" DataSetColumn="NumberLightsOn" />
+              <Mapping SourceColumn="EnergyUsed" DataSetColumn="EnergyUsed" />
+              <Mapping SourceColumn="AHUNotes" DataSetColumn="AHUNotes" />
+              <Mapping SourceColumn="ComputerLabNotes" DataSetColumn="ComputerLabNotes" />
+              <Mapping SourceColumn="TemperatureNotes" DataSetColumn="TemperatureNotes" />
+              <Mapping SourceColumn="KitchenNotes" DataSetColumn="KitchenNotes" />
+              <Mapping SourceColumn="ParkingLightsNotes" DataSetColumn="ParkingLightsNotes" />
+              <Mapping SourceColumn="MarqueeNotes" DataSetColumn="MarqueeNotes" />
+              <Mapping SourceColumn="IrrigationNotes" DataSetColumn="IrrigationNotes" />
+              <Mapping SourceColumn="OtherNotes" DataSetColumn="OtherNotes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TodaysAuditReportsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TodaysAuditReportsDataSet" msprop:Generator_UserDSName="TodaysAuditReportsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Audit" msprop:Generator_TableClassName="AuditDataTable" msprop:Generator_TableVarName="tableAudit" msprop:Generator_TablePropName="Audit" msprop:Generator_RowDeletingName="AuditRowDeleting" msprop:Generator_RowChangingName="AuditRowChanging" msprop:Generator_RowEvHandlerName="AuditRowChangeEventHandler" msprop:Generator_RowDeletedName="AuditRowDeleted" msprop:Generator_UserTableName="Audit" msprop:Generator_RowChangedName="AuditRowChanged" msprop:Generator_RowEvArgName="AuditRowChangeEvent" msprop:Generator_RowClassName="AuditRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AuditDate" msprop:Generator_ColumnVarNameInTable="columnAuditDate" msprop:Generator_ColumnPropNameInRow="AuditDate" msprop:Generator_ColumnPropNameInTable="AuditDateColumn" msprop:Generator_UserColumnName="AuditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuditName" msprop:Generator_ColumnVarNameInTable="columnAuditName" msprop:Generator_ColumnPropNameInRow="AuditName" msprop:Generator_ColumnPropNameInTable="AuditNameColumn" msprop:Generator_UserColumnName="AuditName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CampusName" msprop:Generator_ColumnVarNameInTable="columnCampusName" msprop:Generator_ColumnPropNameInRow="CampusName" msprop:Generator_ColumnPropNameInTable="CampusNameColumn" msprop:Generator_UserColumnName="CampusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuildingName" msprop:Generator_ColumnVarNameInTable="columnBuildingName" msprop:Generator_ColumnPropNameInRow="BuildingName" msprop:Generator_ColumnPropNameInTable="BuildingNameColumn" msprop:Generator_UserColumnName="BuildingName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomName" msprop:Generator_ColumnVarNameInTable="columnRoomName" msprop:Generator_ColumnPropNameInRow="RoomName" msprop:Generator_ColumnPropNameInTable="RoomNameColumn" msprop:Generator_UserColumnName="RoomName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LotName" msprop:Generator_ColumnVarNameInTable="columnLotName" msprop:Generator_ColumnPropNameInRow="LotName" msprop:Generator_ColumnPropNameInTable="LotNameColumn" msprop:Generator_UserColumnName="LotName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Filter" msprop:Generator_ColumnVarNameInTable="columnFilter" msprop:Generator_ColumnPropNameInRow="Filter" msprop:Generator_ColumnPropNameInTable="FilterColumn" msprop:Generator_UserColumnName="Filter" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AHUWaterLeak" msprop:Generator_ColumnVarNameInTable="columnAHUWaterLeak" msprop:Generator_ColumnPropNameInRow="AHUWaterLeak" msprop:Generator_ColumnPropNameInTable="AHUWaterLeakColumn" msprop:Generator_UserColumnName="AHUWaterLeak" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AirLeak" msprop:Generator_ColumnVarNameInTable="columnAirLeak" msprop:Generator_ColumnPropNameInRow="AirLeak" msprop:Generator_ColumnPropNameInTable="AirLeakColumn" msprop:Generator_UserColumnName="AirLeak" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Noise" msprop:Generator_ColumnVarNameInTable="columnNoise" msprop:Generator_ColumnPropNameInRow="Noise" msprop:Generator_ColumnPropNameInTable="NoiseColumn" msprop:Generator_UserColumnName="Noise" type="xs:boolean" minOccurs="0" />
+              <xs:element name="VFD" msprop:Generator_ColumnVarNameInTable="columnVFD" msprop:Generator_ColumnPropNameInRow="VFD" msprop:Generator_ColumnPropNameInTable="VFDColumn" msprop:Generator_UserColumnName="VFD" type="xs:boolean" minOccurs="0" />
+              <xs:element name="InHand" msprop:Generator_ColumnVarNameInTable="columnInHand" msprop:Generator_ColumnPropNameInRow="InHand" msprop:Generator_ColumnPropNameInTable="InHandColumn" msprop:Generator_UserColumnName="InHand" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Error" msprop:Generator_ColumnVarNameInTable="columnError" msprop:Generator_ColumnPropNameInRow="Error" msprop:Generator_ColumnPropNameInTable="ErrorColumn" msprop:Generator_UserColumnName="Error" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AHUOther" msprop:Generator_ColumnVarNameInTable="columnAHUOther" msprop:Generator_ColumnPropNameInRow="AHUOther" msprop:Generator_ColumnPropNameInTable="AHUOtherColumn" msprop:Generator_UserColumnName="AHUOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ComputersOn" msprop:Generator_ColumnVarNameInTable="columnComputersOn" msprop:Generator_ColumnPropNameInRow="ComputersOn" msprop:Generator_ColumnPropNameInTable="ComputersOnColumn" msprop:Generator_UserColumnName="ComputersOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TvsOn" msprop:Generator_ColumnVarNameInTable="columnTvsOn" msprop:Generator_ColumnPropNameInRow="TvsOn" msprop:Generator_ColumnPropNameInTable="TvsOnColumn" msprop:Generator_UserColumnName="TvsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProjectorsOn" msprop:Generator_ColumnVarNameInTable="columnProjectorsOn" msprop:Generator_ColumnPropNameInRow="ProjectorsOn" msprop:Generator_ColumnPropNameInTable="ProjectorsOnColumn" msprop:Generator_UserColumnName="ProjectorsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LabLightsOn" msprop:Generator_ColumnVarNameInTable="columnLabLightsOn" msprop:Generator_ColumnPropNameInRow="LabLightsOn" msprop:Generator_ColumnPropNameInTable="LabLightsOnColumn" msprop:Generator_UserColumnName="LabLightsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LabOther" msprop:Generator_ColumnVarNameInTable="columnLabOther" msprop:Generator_ColumnPropNameInRow="LabOther" msprop:Generator_ColumnPropNameInTable="LabOtherColumn" msprop:Generator_UserColumnName="LabOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="HeadAdjustment" msprop:Generator_ColumnVarNameInTable="columnHeadAdjustment" msprop:Generator_ColumnPropNameInRow="HeadAdjustment" msprop:Generator_ColumnPropNameInTable="HeadAdjustmentColumn" msprop:Generator_UserColumnName="HeadAdjustment" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BrokenHead" msprop:Generator_ColumnVarNameInTable="columnBrokenHead" msprop:Generator_ColumnPropNameInRow="BrokenHead" msprop:Generator_ColumnPropNameInTable="BrokenHeadColumn" msprop:Generator_UserColumnName="BrokenHead" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IrrigationOnDayTime" msprop:Generator_ColumnVarNameInTable="columnIrrigationOnDayTime" msprop:Generator_ColumnPropNameInRow="IrrigationOnDayTime" msprop:Generator_ColumnPropNameInTable="IrrigationOnDayTimeColumn" msprop:Generator_UserColumnName="IrrigationOnDayTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IrrigationOnNightTime" msprop:Generator_ColumnVarNameInTable="columnIrrigationOnNightTime" msprop:Generator_ColumnPropNameInRow="IrrigationOnNightTime" msprop:Generator_ColumnPropNameInTable="IrrigationOnNightTimeColumn" msprop:Generator_UserColumnName="IrrigationOnNightTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ManualOverride" msprop:Generator_ColumnVarNameInTable="columnManualOverride" msprop:Generator_ColumnPropNameInRow="ManualOverride" msprop:Generator_ColumnPropNameInTable="ManualOverrideColumn" msprop:Generator_UserColumnName="ManualOverride" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IrrigationWaterLeak" msprop:Generator_ColumnVarNameInTable="columnIrrigationWaterLeak" msprop:Generator_ColumnPropNameInRow="IrrigationWaterLeak" msprop:Generator_ColumnPropNameInTable="IrrigationWaterLeakColumn" msprop:Generator_UserColumnName="IrrigationWaterLeak" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IrrigationOther" msprop:Generator_ColumnVarNameInTable="columnIrrigationOther" msprop:Generator_ColumnPropNameInRow="IrrigationOther" msprop:Generator_ColumnPropNameInTable="IrrigationOtherColumn" msprop:Generator_UserColumnName="IrrigationOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SecurityMode" msprop:Generator_ColumnVarNameInTable="columnSecurityMode" msprop:Generator_ColumnPropNameInRow="SecurityMode" msprop:Generator_ColumnPropNameInTable="SecurityModeColumn" msprop:Generator_UserColumnName="SecurityMode" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Locked" msprop:Generator_ColumnVarNameInTable="columnLocked" msprop:Generator_ColumnPropNameInRow="Locked" msprop:Generator_ColumnPropNameInTable="LockedColumn" msprop:Generator_UserColumnName="Locked" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LightsOnDayTime" msprop:Generator_ColumnVarNameInTable="columnLightsOnDayTime" msprop:Generator_ColumnPropNameInRow="LightsOnDayTime" msprop:Generator_ColumnPropNameInTable="LightsOnDayTimeColumn" msprop:Generator_UserColumnName="LightsOnDayTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LightsOnNightTime" msprop:Generator_ColumnVarNameInTable="columnLightsOnNightTime" msprop:Generator_ColumnPropNameInRow="LightsOnNightTime" msprop:Generator_ColumnPropNameInTable="LightsOnNightTimeColumn" msprop:Generator_UserColumnName="LightsOnNightTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BrokenBulb" msprop:Generator_ColumnVarNameInTable="columnBrokenBulb" msprop:Generator_ColumnPropNameInRow="BrokenBulb" msprop:Generator_ColumnPropNameInTable="BrokenBulbColumn" msprop:Generator_UserColumnName="BrokenBulb" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ParkingLightsOther" msprop:Generator_ColumnVarNameInTable="columnParkingLightsOther" msprop:Generator_ColumnPropNameInRow="ParkingLightsOther" msprop:Generator_ColumnPropNameInTable="ParkingLightsOtherColumn" msprop:Generator_UserColumnName="ParkingLightsOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TempTooCold" msprop:Generator_ColumnVarNameInTable="columnTempTooCold" msprop:Generator_ColumnPropNameInRow="TempTooCold" msprop:Generator_ColumnPropNameInTable="TempTooColdColumn" msprop:Generator_UserColumnName="TempTooCold" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TempTooHot" msprop:Generator_ColumnVarNameInTable="columnTempTooHot" msprop:Generator_ColumnPropNameInRow="TempTooHot" msprop:Generator_ColumnPropNameInTable="TempTooHotColumn" msprop:Generator_UserColumnName="TempTooHot" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ThermostatBroken" msprop:Generator_ColumnVarNameInTable="columnThermostatBroken" msprop:Generator_ColumnPropNameInRow="ThermostatBroken" msprop:Generator_ColumnPropNameInTable="ThermostatBrokenColumn" msprop:Generator_UserColumnName="ThermostatBroken" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TempOther" msprop:Generator_ColumnVarNameInTable="columnTempOther" msprop:Generator_ColumnPropNameInRow="TempOther" msprop:Generator_ColumnPropNameInTable="TempOtherColumn" msprop:Generator_UserColumnName="TempOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MarqueeOnDayTime" msprop:Generator_ColumnVarNameInTable="columnMarqueeOnDayTime" msprop:Generator_ColumnPropNameInRow="MarqueeOnDayTime" msprop:Generator_ColumnPropNameInTable="MarqueeOnDayTimeColumn" msprop:Generator_UserColumnName="MarqueeOnDayTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MarqueeOnNightTime" msprop:Generator_ColumnVarNameInTable="columnMarqueeOnNightTime" msprop:Generator_ColumnPropNameInRow="MarqueeOnNightTime" msprop:Generator_ColumnPropNameInTable="MarqueeOnNightTimeColumn" msprop:Generator_UserColumnName="MarqueeOnNightTime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BrokenPixels" msprop:Generator_ColumnVarNameInTable="columnBrokenPixels" msprop:Generator_ColumnPropNameInRow="BrokenPixels" msprop:Generator_ColumnPropNameInTable="BrokenPixelsColumn" msprop:Generator_UserColumnName="BrokenPixels" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MarqueeOther" msprop:Generator_ColumnVarNameInTable="columnMarqueeOther" msprop:Generator_ColumnPropNameInRow="MarqueeOther" msprop:Generator_ColumnPropNameInTable="MarqueeOtherColumn" msprop:Generator_UserColumnName="MarqueeOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WaterRunning" msprop:Generator_ColumnVarNameInTable="columnWaterRunning" msprop:Generator_ColumnPropNameInRow="WaterRunning" msprop:Generator_ColumnPropNameInTable="WaterRunningColumn" msprop:Generator_UserColumnName="WaterRunning" type="xs:boolean" minOccurs="0" />
+              <xs:element name="KitchenWaterLeak" msprop:Generator_ColumnVarNameInTable="columnKitchenWaterLeak" msprop:Generator_ColumnPropNameInRow="KitchenWaterLeak" msprop:Generator_ColumnPropNameInTable="KitchenWaterLeakColumn" msprop:Generator_UserColumnName="KitchenWaterLeak" type="xs:boolean" minOccurs="0" />
+              <xs:element name="KitchenLightsOn" msprop:Generator_ColumnVarNameInTable="columnKitchenLightsOn" msprop:Generator_ColumnPropNameInRow="KitchenLightsOn" msprop:Generator_ColumnPropNameInTable="KitchenLightsOnColumn" msprop:Generator_UserColumnName="KitchenLightsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FridgeOpen" msprop:Generator_ColumnVarNameInTable="columnFridgeOpen" msprop:Generator_ColumnPropNameInRow="FridgeOpen" msprop:Generator_ColumnPropNameInTable="FridgeOpenColumn" msprop:Generator_UserColumnName="FridgeOpen" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FreezerOpen" msprop:Generator_ColumnVarNameInTable="columnFreezerOpen" msprop:Generator_ColumnPropNameInRow="FreezerOpen" msprop:Generator_ColumnPropNameInTable="FreezerOpenColumn" msprop:Generator_UserColumnName="FreezerOpen" type="xs:boolean" minOccurs="0" />
+              <xs:element name="KitchenOther" msprop:Generator_ColumnVarNameInTable="columnKitchenOther" msprop:Generator_ColumnPropNameInRow="KitchenOther" msprop:Generator_ColumnPropNameInTable="KitchenOtherColumn" msprop:Generator_UserColumnName="KitchenOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NumberComputersOn" msprop:Generator_ColumnVarNameInTable="columnNumberComputersOn" msprop:Generator_ColumnPropNameInRow="NumberComputersOn" msprop:Generator_ColumnPropNameInTable="NumberComputersOnColumn" msprop:Generator_UserColumnName="NumberComputersOn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberTvsOn" msprop:Generator_ColumnVarNameInTable="columnNumberTvsOn" msprop:Generator_ColumnPropNameInRow="NumberTvsOn" msprop:Generator_ColumnPropNameInTable="NumberTvsOnColumn" msprop:Generator_UserColumnName="NumberTvsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberProjectorsOn" msprop:Generator_ColumnVarNameInTable="columnNumberProjectorsOn" msprop:Generator_ColumnPropNameInRow="NumberProjectorsOn" msprop:Generator_ColumnPropNameInTable="NumberProjectorsOnColumn" msprop:Generator_UserColumnName="NumberProjectorsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberLightsOn" msprop:Generator_ColumnVarNameInTable="columnNumberLightsOn" msprop:Generator_ColumnPropNameInRow="NumberLightsOn" msprop:Generator_ColumnPropNameInTable="NumberLightsOnColumn" msprop:Generator_UserColumnName="NumberLightsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="EnergyUsed" msprop:Generator_ColumnVarNameInTable="columnEnergyUsed" msprop:Generator_ColumnPropNameInRow="EnergyUsed" msprop:Generator_ColumnPropNameInTable="EnergyUsedColumn" msprop:Generator_UserColumnName="EnergyUsed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AHUNotes" msprop:Generator_ColumnVarNameInTable="columnAHUNotes" msprop:Generator_ColumnPropNameInRow="AHUNotes" msprop:Generator_ColumnPropNameInTable="AHUNotesColumn" msprop:Generator_UserColumnName="AHUNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ComputerLabNotes" msprop:Generator_ColumnVarNameInTable="columnComputerLabNotes" msprop:Generator_ColumnPropNameInRow="ComputerLabNotes" msprop:Generator_ColumnPropNameInTable="ComputerLabNotesColumn" msprop:Generator_UserColumnName="ComputerLabNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TemperatureNotes" msprop:Generator_ColumnVarNameInTable="columnTemperatureNotes" msprop:Generator_ColumnPropNameInRow="TemperatureNotes" msprop:Generator_ColumnPropNameInTable="TemperatureNotesColumn" msprop:Generator_UserColumnName="TemperatureNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KitchenNotes" msprop:Generator_ColumnVarNameInTable="columnKitchenNotes" msprop:Generator_ColumnPropNameInRow="KitchenNotes" msprop:Generator_ColumnPropNameInTable="KitchenNotesColumn" msprop:Generator_UserColumnName="KitchenNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParkingLightsNotes" msprop:Generator_ColumnVarNameInTable="columnParkingLightsNotes" msprop:Generator_ColumnPropNameInRow="ParkingLightsNotes" msprop:Generator_ColumnPropNameInTable="ParkingLightsNotesColumn" msprop:Generator_UserColumnName="ParkingLightsNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MarqueeNotes" msprop:Generator_ColumnVarNameInTable="columnMarqueeNotes" msprop:Generator_ColumnPropNameInRow="MarqueeNotes" msprop:Generator_ColumnPropNameInTable="MarqueeNotesColumn" msprop:Generator_UserColumnName="MarqueeNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IrrigationNotes" msprop:Generator_ColumnVarNameInTable="columnIrrigationNotes" msprop:Generator_ColumnPropNameInRow="IrrigationNotes" msprop:Generator_ColumnPropNameInTable="IrrigationNotesColumn" msprop:Generator_UserColumnName="IrrigationNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherNotes" msprop:Generator_ColumnVarNameInTable="columnOtherNotes" msprop:Generator_ColumnPropNameInRow="OtherNotes" msprop:Generator_ColumnPropNameInTable="OtherNotesColumn" msprop:Generator_UserColumnName="OtherNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

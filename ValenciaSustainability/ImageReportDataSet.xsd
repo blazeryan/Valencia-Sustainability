@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ImageReportDataSet" targetNamespace="http://tempuri.org/ImageReportDataSet.xsd" xmlns:mstns="http://tempuri.org/ImageReportDataSet.xsd" xmlns="http://tempuri.org/ImageReportDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValenciaSustainabilityDatabaseConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValenciaSustainabilityDatabaseConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuditTableAdapter" GeneratorDataComponentClassName="AuditTableAdapter" Name="Audit" UserDataComponentName="AuditTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" DbObjectName="ValenciaSustainabilityDatabase.dbo.Audit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AuditName, CampusName, BuildingName, RoomName, AuditDate, ImageLink
+FROM     Audit</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AuditName" DataSetColumn="AuditName" />
+              <Mapping SourceColumn="CampusName" DataSetColumn="CampusName" />
+              <Mapping SourceColumn="BuildingName" DataSetColumn="BuildingName" />
+              <Mapping SourceColumn="RoomName" DataSetColumn="RoomName" />
+              <Mapping SourceColumn="AuditDate" DataSetColumn="AuditDate" />
+              <Mapping SourceColumn="ImageLink" DataSetColumn="ImageLink" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ImageReportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ImageReportDataSet" msprop:Generator_UserDSName="ImageReportDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Audit" msprop:Generator_TableClassName="AuditDataTable" msprop:Generator_TableVarName="tableAudit" msprop:Generator_TablePropName="Audit" msprop:Generator_RowDeletingName="AuditRowDeleting" msprop:Generator_RowChangingName="AuditRowChanging" msprop:Generator_RowEvHandlerName="AuditRowChangeEventHandler" msprop:Generator_RowDeletedName="AuditRowDeleted" msprop:Generator_UserTableName="Audit" msprop:Generator_RowChangedName="AuditRowChanged" msprop:Generator_RowEvArgName="AuditRowChangeEvent" msprop:Generator_RowClassName="AuditRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AuditName" msprop:Generator_ColumnVarNameInTable="columnAuditName" msprop:Generator_ColumnPropNameInRow="AuditName" msprop:Generator_ColumnPropNameInTable="AuditNameColumn" msprop:Generator_UserColumnName="AuditName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CampusName" msprop:Generator_ColumnVarNameInTable="columnCampusName" msprop:Generator_ColumnPropNameInRow="CampusName" msprop:Generator_ColumnPropNameInTable="CampusNameColumn" msprop:Generator_UserColumnName="CampusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuildingName" msprop:Generator_ColumnVarNameInTable="columnBuildingName" msprop:Generator_ColumnPropNameInRow="BuildingName" msprop:Generator_ColumnPropNameInTable="BuildingNameColumn" msprop:Generator_UserColumnName="BuildingName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomName" msprop:Generator_ColumnVarNameInTable="columnRoomName" msprop:Generator_ColumnPropNameInRow="RoomName" msprop:Generator_ColumnPropNameInTable="RoomNameColumn" msprop:Generator_UserColumnName="RoomName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AuditDate" msprop:Generator_ColumnVarNameInTable="columnAuditDate" msprop:Generator_ColumnPropNameInRow="AuditDate" msprop:Generator_ColumnPropNameInTable="AuditDateColumn" msprop:Generator_UserColumnName="AuditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ImageLink" msprop:Generator_ColumnVarNameInTable="columnImageLink" msprop:Generator_ColumnPropNameInRow="ImageLink" msprop:Generator_ColumnPropNameInTable="ImageLinkColumn" msprop:Generator_UserColumnName="ImageLink" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

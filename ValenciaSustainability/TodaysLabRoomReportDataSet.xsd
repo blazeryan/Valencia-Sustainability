@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TodaysLabRoomReportDataSet" targetNamespace="http://tempuri.org/TodaysLabRoomReportDataSet.xsd" xmlns:mstns="http://tempuri.org/TodaysLabRoomReportDataSet.xsd" xmlns="http://tempuri.org/TodaysLabRoomReportDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValenciaSustainabilityDatabaseConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValenciaSustainabilityDatabaseConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuditTableAdapter" GeneratorDataComponentClassName="AuditTableAdapter" Name="Audit" UserDataComponentName="AuditTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValenciaSustainabilityDatabaseConnectionString2 (Web.config)" DbObjectName="ValenciaSustainabilityDatabase.dbo.Audit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AuditDate, AuditName, CampusName, BuildingName, RoomName, ComputersOn, TvsOn, ProjectorsOn, LabLightsOn, LabOther, NumberComputersOn, NumberTvsOn, NumberProjectorsOn, NumberLightsOn, 
+                  EnergyUsed, ComputerLabNotes, OtherNotes
+FROM     Audit
+ WHERE (AuditDate = { fn CURDATE()})</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AuditDate" DataSetColumn="AuditDate" />
+              <Mapping SourceColumn="AuditName" DataSetColumn="AuditName" />
+              <Mapping SourceColumn="CampusName" DataSetColumn="CampusName" />
+              <Mapping SourceColumn="BuildingName" DataSetColumn="BuildingName" />
+              <Mapping SourceColumn="RoomName" DataSetColumn="RoomName" />
+              <Mapping SourceColumn="ComputersOn" DataSetColumn="ComputersOn" />
+              <Mapping SourceColumn="TvsOn" DataSetColumn="TvsOn" />
+              <Mapping SourceColumn="ProjectorsOn" DataSetColumn="ProjectorsOn" />
+              <Mapping SourceColumn="LabLightsOn" DataSetColumn="LabLightsOn" />
+              <Mapping SourceColumn="LabOther" DataSetColumn="LabOther" />
+              <Mapping SourceColumn="NumberComputersOn" DataSetColumn="NumberComputersOn" />
+              <Mapping SourceColumn="NumberTvsOn" DataSetColumn="NumberTvsOn" />
+              <Mapping SourceColumn="NumberProjectorsOn" DataSetColumn="NumberProjectorsOn" />
+              <Mapping SourceColumn="NumberLightsOn" DataSetColumn="NumberLightsOn" />
+              <Mapping SourceColumn="EnergyUsed" DataSetColumn="EnergyUsed" />
+              <Mapping SourceColumn="ComputerLabNotes" DataSetColumn="ComputerLabNotes" />
+              <Mapping SourceColumn="OtherNotes" DataSetColumn="OtherNotes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TodaysLabRoomReportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TodaysLabRoomReportDataSet" msprop:Generator_UserDSName="TodaysLabRoomReportDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Audit" msprop:Generator_TableClassName="AuditDataTable" msprop:Generator_TableVarName="tableAudit" msprop:Generator_RowChangedName="AuditRowChanged" msprop:Generator_TablePropName="Audit" msprop:Generator_RowDeletingName="AuditRowDeleting" msprop:Generator_RowChangingName="AuditRowChanging" msprop:Generator_RowEvHandlerName="AuditRowChangeEventHandler" msprop:Generator_RowDeletedName="AuditRowDeleted" msprop:Generator_RowClassName="AuditRow" msprop:Generator_UserTableName="Audit" msprop:Generator_RowEvArgName="AuditRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AuditDate" msprop:Generator_ColumnVarNameInTable="columnAuditDate" msprop:Generator_ColumnPropNameInRow="AuditDate" msprop:Generator_ColumnPropNameInTable="AuditDateColumn" msprop:Generator_UserColumnName="AuditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuditName" msprop:Generator_ColumnVarNameInTable="columnAuditName" msprop:Generator_ColumnPropNameInRow="AuditName" msprop:Generator_ColumnPropNameInTable="AuditNameColumn" msprop:Generator_UserColumnName="AuditName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CampusName" msprop:Generator_ColumnVarNameInTable="columnCampusName" msprop:Generator_ColumnPropNameInRow="CampusName" msprop:Generator_ColumnPropNameInTable="CampusNameColumn" msprop:Generator_UserColumnName="CampusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuildingName" msprop:Generator_ColumnVarNameInTable="columnBuildingName" msprop:Generator_ColumnPropNameInRow="BuildingName" msprop:Generator_ColumnPropNameInTable="BuildingNameColumn" msprop:Generator_UserColumnName="BuildingName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomName" msprop:Generator_ColumnVarNameInTable="columnRoomName" msprop:Generator_ColumnPropNameInRow="RoomName" msprop:Generator_ColumnPropNameInTable="RoomNameColumn" msprop:Generator_UserColumnName="RoomName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ComputersOn" msprop:Generator_ColumnVarNameInTable="columnComputersOn" msprop:Generator_ColumnPropNameInRow="ComputersOn" msprop:Generator_ColumnPropNameInTable="ComputersOnColumn" msprop:Generator_UserColumnName="ComputersOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TvsOn" msprop:Generator_ColumnVarNameInTable="columnTvsOn" msprop:Generator_ColumnPropNameInRow="TvsOn" msprop:Generator_ColumnPropNameInTable="TvsOnColumn" msprop:Generator_UserColumnName="TvsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProjectorsOn" msprop:Generator_ColumnVarNameInTable="columnProjectorsOn" msprop:Generator_ColumnPropNameInRow="ProjectorsOn" msprop:Generator_ColumnPropNameInTable="ProjectorsOnColumn" msprop:Generator_UserColumnName="ProjectorsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LabLightsOn" msprop:Generator_ColumnVarNameInTable="columnLabLightsOn" msprop:Generator_ColumnPropNameInRow="LabLightsOn" msprop:Generator_ColumnPropNameInTable="LabLightsOnColumn" msprop:Generator_UserColumnName="LabLightsOn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LabOther" msprop:Generator_ColumnVarNameInTable="columnLabOther" msprop:Generator_ColumnPropNameInRow="LabOther" msprop:Generator_ColumnPropNameInTable="LabOtherColumn" msprop:Generator_UserColumnName="LabOther" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NumberComputersOn" msprop:Generator_ColumnVarNameInTable="columnNumberComputersOn" msprop:Generator_ColumnPropNameInRow="NumberComputersOn" msprop:Generator_ColumnPropNameInTable="NumberComputersOnColumn" msprop:Generator_UserColumnName="NumberComputersOn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberTvsOn" msprop:Generator_ColumnVarNameInTable="columnNumberTvsOn" msprop:Generator_ColumnPropNameInRow="NumberTvsOn" msprop:Generator_ColumnPropNameInTable="NumberTvsOnColumn" msprop:Generator_UserColumnName="NumberTvsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberProjectorsOn" msprop:Generator_ColumnVarNameInTable="columnNumberProjectorsOn" msprop:Generator_ColumnPropNameInRow="NumberProjectorsOn" msprop:Generator_ColumnPropNameInTable="NumberProjectorsOnColumn" msprop:Generator_UserColumnName="NumberProjectorsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="NumberLightsOn" msprop:Generator_ColumnVarNameInTable="columnNumberLightsOn" msprop:Generator_ColumnPropNameInRow="NumberLightsOn" msprop:Generator_ColumnPropNameInTable="NumberLightsOnColumn" msprop:Generator_UserColumnName="NumberLightsOn" type="xs:int" minOccurs="0" />
+              <xs:element name="EnergyUsed" msprop:Generator_ColumnVarNameInTable="columnEnergyUsed" msprop:Generator_ColumnPropNameInRow="EnergyUsed" msprop:Generator_ColumnPropNameInTable="EnergyUsedColumn" msprop:Generator_UserColumnName="EnergyUsed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ComputerLabNotes" msprop:Generator_ColumnVarNameInTable="columnComputerLabNotes" msprop:Generator_ColumnPropNameInRow="ComputerLabNotes" msprop:Generator_ColumnPropNameInTable="ComputerLabNotesColumn" msprop:Generator_UserColumnName="ComputerLabNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherNotes" msprop:Generator_ColumnVarNameInTable="columnOtherNotes" msprop:Generator_ColumnPropNameInRow="OtherNotes" msprop:Generator_ColumnPropNameInTable="OtherNotesColumn" msprop:Generator_UserColumnName="OtherNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
