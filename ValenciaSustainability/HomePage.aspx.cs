@@ -77,27 +77,8 @@ namespace ValenciaSustainability
                 SelectOtherTextBoxValueFromAuditRecord2();
                 SelectEnergyCostTextBoxValueFromAuditRecord2();
 
-
-
             }
         }
-
-
-     
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
         // Select Kitchen Text Box Value from Database Based on AuditID When Record Selected From GridView. 
         public void SelectKitchenTextBoxValueFromAuditRecord2()
