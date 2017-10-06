@@ -11,7 +11,7 @@
         <div>
             <h1>Manage Lab Rooms</h1>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [RoomNumber], [RoomID], [BuildingID] FROM [Room]" DeleteCommand="DELETE FROM [Room] WHERE [RoomID] = @RoomID" InsertCommand="INSERT INTO [Room] ([RoomNumber], [BuildingID]) VALUES (@RoomNumber, @BuildingID)" UpdateCommand="UPDATE [Room] SET [RoomNumber] = @RoomNumber, [BuildingID] = @BuildingID WHERE [RoomID] = @RoomID">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [RoomNumber], [RoomID], [BuildingID] FROM [Room]" DeleteCommand="DELETE FROM [Room] WHERE [RoomID] = @RoomID" InsertCommand="INSERT INTO [Room] ([RoomNumber], [BuildingID]) VALUES (@RoomNumber, @BuildingID)" UpdateCommand="UPDATE [Room] SET [RoomNumber] = @RoomNumber, [BuildingID] = @BuildingID WHERE [RoomID] = @RoomID">
             <DeleteParameters>
                 <asp:Parameter Name="RoomID" Type="Int32" />
             </DeleteParameters>

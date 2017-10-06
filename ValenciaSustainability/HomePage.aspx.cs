@@ -16,7 +16,10 @@ namespace ValenciaSustainability
 
     public partial class HomePage : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaSustainabilityDatabaseConnectionString2"].ConnectionString);
+        //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ConnectionString);
+
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ConnectionString);
+
 
         protected void Page_Load(object sender, EventArgs e)
         {

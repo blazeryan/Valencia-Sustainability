@@ -62,17 +62,17 @@
             <br />
             <asp:DropDownList ID="NameDropDownList" runat="server" Style="position: absolute; top: 82px; left: 10px; height: 19px; z-index: 1; right: 1746px;" EnableTheming="True" DataTextField="AuditorFirstName" DataValueField="AuditorFirstName">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="Auditor" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" OnSelecting="Auditor_Selecting" SelectCommand="SELECT DISTINCT [AuditorFirstName], [AuditorLastName] FROM [Auditor] ORDER BY [AuditorFirstName]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="Auditor" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" OnSelecting="Auditor_Selecting" SelectCommand="SELECT DISTINCT [AuditorFirstName], [AuditorLastName] FROM [Auditor] ORDER BY [AuditorFirstName]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
         <asp:DropDownList ID="CampusDropDownList" runat="server" Height="19px" Style="position: absolute; top: 82px; left: 168px; z-index: 1; " AutoPostBack="True" OnSelectedIndexChanged="CampusDropDownList_SelectedIndexChanged" DataTextField="CampusName" DataValueField="CampusID">
         </asp:DropDownList>
-            <asp:SqlDataSource ID="Campus" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT DISTINCT [CampusName] FROM [Campus] ORDER BY [CampusName]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="Campus" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT DISTINCT [CampusName] FROM [Campus] ORDER BY [CampusName]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="BuildingDropDownList" runat="server" Style="z-index: 1; left: 295px; top: 82px; position: absolute; height: 19px; width: 132px; bottom: 748px;" AutoPostBack="True" OnSelectedIndexChanged="BuildingDropDownList_SelectedIndexChanged" DataTextField="BuildingNumber" DataValueField="BuildingID">
                 <asp:ListItem>NA</asp:ListItem>
                 <asp:ListItem Value="1"></asp:ListItem>
             </asp:DropDownList>
-            <asp:SqlDataSource ID="Buildings" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT DISTINCT [BuildingNumber] FROM [Building]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="Buildings" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT DISTINCT [BuildingNumber] FROM [Building]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <asp:DropDownList ID="ZoneDropDownList" runat="server" Style="z-index: 1; left: 540px; top: 82px; position: absolute; right: 1259px;" OnSelectedIndexChanged="ZoneDropDownList_SelectedIndexChanged" AutoPostBack="True" DataTextField="Zone" DataValueField="ZoneID">
                 <asp:ListItem>NA</asp:ListItem>
@@ -102,7 +102,7 @@
             <asp:ListItem>9</asp:ListItem>
             <asp:ListItem>10</asp:ListItem>
         </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [LotName] FROM [ParkingLot] WHERE ([CampusID] = @CampusID)">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [LotName] FROM [ParkingLot] WHERE ([CampusID] = @CampusID)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="CampusDropDownList" DefaultValue="1" Name="CampusID" PropertyName="SelectedValue" Type="Int32" />
                 </SelectParameters>
@@ -119,7 +119,7 @@
             <asp:ListItem>Weeknight</asp:ListItem>
             <asp:ListItem>Remote</asp:ListItem>
         </asp:DropDownList>
-            <asp:SqlDataSource ID="AuditTypes" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [AuditType] FROM [AuditType]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="AuditTypes" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [AuditType] FROM [AuditType]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
             <br />
@@ -140,7 +140,7 @@
                 <asp:ListItem>Error</asp:ListItem>
                 <asp:ListItem>Other/Notes</asp:ListItem>
             </asp:CheckBoxList>
-            <asp:SqlDataSource ID="AirHandler" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [Filter], [AHUNotes], [AHUWaterLeak], [AirLeak], [Noise], [VFD], [InHand], [Error], [AHUOther] FROM [Audit]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="AirHandler" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [Filter], [AHUNotes], [AHUWaterLeak], [AirLeak], [Noise], [VFD], [InHand], [Error], [AHUOther] FROM [Audit]"></asp:SqlDataSource>
             <asp:CheckBoxList ID="LabCheckBoxList" runat="server" Style="position: absolute; top: 474px; left: 323px; z-index: 5; height: 132px; width: 139px" OnSelectedIndexChanged="LabCheckBoxList_SelectedIndexChanged">
                 <asp:ListItem>Computers On</asp:ListItem>
                 <asp:ListItem>TVs On</asp:ListItem>
@@ -237,7 +237,7 @@
                 <asp:ListItem>Water Leak</asp:ListItem>
                 <asp:ListItem>Other/Notes</asp:ListItem>
             </asp:CheckBoxList>
-            <asp:SqlDataSource ID="IrrigationCBDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [IssueName] FROM [Issue]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="IrrigationCBDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [IssueName] FROM [Issue]"></asp:SqlDataSource>
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="IrrigationLabel" runat="server" Style="font-weight: 700; position: absolute; z-index: 1; left: 328px; top: 157px; bottom: 488px" Text="Irrigation"></asp:Label>
@@ -459,7 +459,7 @@
             <asp:ListItem>Freezer Open</asp:ListItem>
             <asp:ListItem>Other/Notes</asp:ListItem>
         </asp:CheckBoxList>
-            <asp:SqlDataSource ID="KitchenIssue" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [WaterRunning], [KitchenWaterLeak], [KitchenLightsOn], [FridgeOpen], [FreezerOpen], [KitchenOther] FROM [Audit]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="KitchenIssue" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [WaterRunning], [KitchenWaterLeak], [KitchenLightsOn], [FridgeOpen], [FreezerOpen], [KitchenOther] FROM [Audit]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Calendar ID="Calendar1" runat="server" Style="height: 211px; width: 219px; position: absolute; top: 162px; left: 506px; z-index: 1" ShowNextPrevMonth="False" OnSelectionChanged="Calendar1_SelectionChanged" SelectedDate="04/06/2017 10:14:10">
             <SelectedDayStyle BackColor="#00CCFF" />
@@ -512,7 +512,7 @@
             <asp:ListItem>NA</asp:ListItem>
         </asp:ListBox>
 
-            <asp:SqlDataSource ID="Rooms" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [RoomNumber] FROM [Room] WHERE ([BuildingID] = @BuildingID)">
+            <asp:SqlDataSource ID="Rooms" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [RoomNumber] FROM [Room] WHERE ([BuildingID] = @BuildingID)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="BuildingDropDownList" DefaultValue="1" Name="BuildingID" PropertyName="SelectedValue" Type="Int32" />
                 </SelectParameters>

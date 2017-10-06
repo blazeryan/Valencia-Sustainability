@@ -219,6 +219,7 @@
     <Content Include="AuditReportsDataSet.xsc">
       <DependentUpon>AuditReportsDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="App_Data\ValenciaSustainabilityDB.bacpac" />
     <None Include="AuditReportsDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -785,7 +786,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>

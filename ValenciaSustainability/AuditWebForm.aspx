@@ -21,7 +21,7 @@
                 <asp:CheckBoxField DataField="KitchenOther" HeaderText="KitchenOther" SortExpression="KitchenOther" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="Audit" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [WaterRunning], [KitchenWaterLeak], [KitchenLightsOn], [FridgeOpen], [FreezerOpen], [KitchenOther] FROM [Audit]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="Audit" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [WaterRunning], [KitchenWaterLeak], [KitchenLightsOn], [FridgeOpen], [FreezerOpen], [KitchenOther] FROM [Audit]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

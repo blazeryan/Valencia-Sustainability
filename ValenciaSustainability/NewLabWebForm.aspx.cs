@@ -15,7 +15,7 @@ namespace ValenciaSustainability
     public partial class NewLabWebForm : System.Web.UI.Page
 
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaSustainabilityDatabaseConnectionString2"].ConnectionString);
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ConnectionString);
         SqlDataAdapter da;
         DataSet ds = new DataSet();
         string query;
