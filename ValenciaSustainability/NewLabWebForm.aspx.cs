@@ -13,7 +13,6 @@ using System.Data.SqlClient;
 namespace ValenciaSustainability
 {
     public partial class NewLabWebForm : System.Web.UI.Page
-
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ConnectionString);
         SqlDataAdapter da;
@@ -30,8 +29,8 @@ namespace ValenciaSustainability
 
         protected void LabRoomTextBox_TextChanged(object sender, EventArgs e)
         {
-           
-           
+
+
         }
 
 
@@ -44,7 +43,7 @@ namespace ValenciaSustainability
             RoomNumber = LabRoomTextBox.Text;
             BuildingID = CampusDropDownList.SelectedValue;
 
-            string connectionString = ConfigurationManager.ConnectionStrings["ValenciaConnection"].ToString();
+            string connectionString = ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ToString();
 
             System.Data.SqlClient.SqlConnection sqlConnection1 =
               new System.Data.SqlClient.SqlConnection(connectionString);
@@ -75,7 +74,7 @@ namespace ValenciaSustainability
 
         protected void BuildingDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-      
+
         }
 
         protected void CampusDropDownList_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,18 +125,18 @@ namespace ValenciaSustainability
 
         protected void LabRoomTextBox_TextChanged1(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void CampusDataSource_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
-        
+
         }
 
         protected void Campus_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
-            
+
         }
 
         protected void Building_Selecting(object sender, SqlDataSourceSelectingEventArgs e)

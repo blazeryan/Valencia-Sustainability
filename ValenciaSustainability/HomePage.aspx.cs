@@ -2090,10 +2090,10 @@ namespace ValenciaSustainability
         }
 
         string myGuid = Guid.NewGuid().ToString() + ".jpg";
-           
+
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-           
+
 
             // Response.Write("This is myGuid Value !  " + myGuid);
 
@@ -2116,7 +2116,7 @@ namespace ValenciaSustainability
             else
             {
                 // Response.Write("Please select a file to upload.");
-                
+
             }
 
             Save();
@@ -2283,7 +2283,7 @@ namespace ValenciaSustainability
                     RoomListBox.DataSource = SelectRoomsDs;
                     RoomListBox.DataTextField = "RoomNumber";
                     RoomListBox.DataValueField = "RoomID";
-                    RoomListBox.DataBind();                
+                    RoomListBox.DataBind();
                     RoomListBox.SelectedIndex = 0;
                 }
             }
@@ -2494,18 +2494,18 @@ namespace ValenciaSustainability
         public void SaveImage(string myString)
         {
 
-        // THIS IS THE PATH FOR AN IMAGE
-        // http://localhost:56840/Data/7567f9ab-a5af-4cab-9837-d4059a7df7f4.jpg
+            // THIS IS THE PATH FOR AN IMAGE
+            // http://localhost:56840/Data/7567f9ab-a5af-4cab-9837-d4059a7df7f4.jpg
 
-             String myImageLink = "";
-
-
-             //String myImageLink = "<a href='http://localhost:56840/Data/" + myGuid + "'>hyperlink</a>";
+            String myImageLink = "";
 
 
-             myImageLink = string.Format("<a href=http://localhost:56840/Data/{0}>putFriendlyNameHere</a>", myGuid);
+            //String myImageLink = "<a href='http://localhost:56840/Data/" + myGuid + "'>hyperlink</a>";
 
-      
+
+            myImageLink = string.Format("<a href=http://localhost:56840/Data/{0}>putFriendlyNameHere</a>", myGuid);
+
+
             if (Request.QueryString["auditid"] == null)
             {
                 // We are inserting
