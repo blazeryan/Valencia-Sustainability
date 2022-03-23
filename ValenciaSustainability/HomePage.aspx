@@ -60,21 +60,21 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
         <asp:Label ID="AuditTypeLabel" runat="server" Text="Audit Type" Style="position: absolute; font-weight: 700; z-index: 1; left: 614px; top: 50px; bottom: 540px; width: 80px;"></asp:Label>
             <br />
-            <asp:DropDownList ID="NameDropDownList" runat="server" Style="position: absolute; top: 82px; left: 10px; height: 19px; z-index: 1; right: 1746px;" EnableTheming="True" DataTextField="AuditorFirstName" DataValueField="AuditorFirstName">
+            <asp:DropDownList ID="NameDropDownList" runat="server" Style="position: absolute; top: 80px; left: 10px; width: 132px; height: 19px; z-index: 1; right: 1873px;" EnableTheming="True" DataTextField="AuditorFirstName" DataValueField="AuditorFirstName">
             </asp:DropDownList>
             <asp:SqlDataSource ID="Auditor" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" OnSelecting="Auditor_Selecting" SelectCommand="SELECT DISTINCT [AuditorFirstName], [AuditorLastName] FROM [Auditor] ORDER BY [AuditorFirstName]"></asp:SqlDataSource>
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="CampusDropDownList" runat="server" Height="19px" Style="position: absolute; top: 82px; left: 168px; z-index: 1; " AutoPostBack="True" OnSelectedIndexChanged="CampusDropDownList_SelectedIndexChanged" DataTextField="CampusName" DataValueField="CampusID">
+        <asp:DropDownList ID="CampusDropDownList" runat="server" Height="19px" Style="position: absolute; top: 80px; left: 168px; z-index: 1; " AutoPostBack="True" OnSelectedIndexChanged="CampusDropDownList_SelectedIndexChanged" DataTextField="CampusName" DataValueField="CampusID">
         </asp:DropDownList>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
             <asp:SqlDataSource ID="Campus" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT DISTINCT [CampusName] FROM [Campus] ORDER BY [CampusName]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:DropDownList ID="BuildingDropDownList" runat="server" Style="z-index: 1; left: 295px; top: 82px; position: absolute; height: 19px; width: 132px; bottom: 748px;" AutoPostBack="True" OnSelectedIndexChanged="BuildingDropDownList_SelectedIndexChanged" DataTextField="BuildingNumber" DataValueField="BuildingID">
+            <asp:DropDownList ID="BuildingDropDownList" runat="server" Style="z-index: 1; top: 80px; position: absolute; height: 19px; width: 132px; bottom: 829px; left: 291px;" AutoPostBack="True" OnSelectedIndexChanged="BuildingDropDownList_SelectedIndexChanged" DataTextField="BuildingNumber" DataValueField="BuildingID">
                 <asp:ListItem>NA</asp:ListItem>
                 <asp:ListItem Value="1"></asp:ListItem>
             </asp:DropDownList>
             <asp:SqlDataSource ID="Buildings" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT DISTINCT [BuildingNumber] FROM [Building]"></asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-            <asp:DropDownList ID="ZoneDropDownList" runat="server" Style="z-index: 1; left: 540px; top: 82px; position: absolute; right: 1259px;" OnSelectedIndexChanged="ZoneDropDownList_SelectedIndexChanged" AutoPostBack="True" DataTextField="Zone" DataValueField="ZoneID">
+            <asp:DropDownList ID="ZoneDropDownList" runat="server" Style="z-index: 1; left: 540px; top: 80px; position: absolute; width: 50px;right: 1259px;" OnSelectedIndexChanged="ZoneDropDownList_SelectedIndexChanged" AutoPostBack="True" DataTextField="Zone" DataValueField="ZoneID">
                 <asp:ListItem>NA</asp:ListItem>
                 <asp:ListItem>A</asp:ListItem>
                 <asp:ListItem>B</asp:ListItem>
@@ -89,7 +89,7 @@
                 <asp:ListItem>K</asp:ListItem>
             </asp:DropDownList>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="ParkingLotDropDownList" runat="server" Style="z-index: 1; top: 82px; position: absolute; left: 470px; " AutoPostBack="True" DataTextField="LotName" DataValueField="ParkingLotID" OnSelectedIndexChanged="ParkingLotDropDownList_SelectedIndexChanged">
+        <asp:DropDownList ID="ParkingLotDropDownList" runat="server" Style="z-index: 1; top: 80px; position: absolute; width: 50px; left: 470px; " AutoPostBack="True" DataTextField="LotName" DataValueField="ParkingLotID" OnSelectedIndexChanged="ParkingLotDropDownList_SelectedIndexChanged">
             <asp:ListItem>NA</asp:ListItem>
             <asp:ListItem>1</asp:ListItem>
             <asp:ListItem>2</asp:ListItem>
@@ -108,7 +108,7 @@
                 </SelectParameters>
             </asp:SqlDataSource>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-        <asp:DropDownList ID="AuditDropDownList" runat="server" Style="position: absolute; top: 81px; z-index: 1; left: 618px;" OnSelectedIndexChanged="AuditDropDownList_SelectedIndexChanged" AutoPostBack="True" DataTextField="AuditType" DataValueField="AuditTypeID">
+        <asp:DropDownList ID="AuditDropDownList" runat="server" Style="position: absolute; top: 80px; z-index: 1; left: 618px;" OnSelectedIndexChanged="AuditDropDownList_SelectedIndexChanged" AutoPostBack="True" DataTextField="AuditType" DataValueField="AuditTypeID">
             <asp:ListItem>NA</asp:ListItem>
             <asp:ListItem>Break</asp:ListItem>
             <asp:ListItem>Holiday</asp:ListItem>
@@ -189,7 +189,7 @@
                 <asp:TextBox ID="ProjectorWattsUsedTextBox" runat="server" style="z-index: 1; left: 367px; top: 706px; position: absolute; width: 88px">260</asp:TextBox>
                 <asp:TextBox ID="ProjectorTimeUsedTextBox" runat="server" style="z-index: 1; left: 366px; top: 743px; position: absolute; width: 88px">0</asp:TextBox>
                 <asp:TextBox ID="EnergyCostTextBox" runat="server" OnTextChanged="EnergyUseTextBox_TextChanged" style="z-index: 1; left: 641px; top: 774px; position: absolute; width: 88px"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" BackColor="#65C5F3" Font-Bold="True" ForeColor="#0033CC" OnClick="Button1_Click" style="z-index: 1; width: 88px; left: 641px; top: 709px; position: absolute; right: 539px" Text="Calculate" />
+                <asp:Button ID="Button1" runat="server" BackColor="#65C5F3" Font-Bold="True" ForeColor="#0033CC" OnClick="Button1_Click" style="z-index: 1; width: 95px; left: 641px; top: 709px; position: absolute; right: 539px" Text="Calculate" />
             </h1>
             <br />
 
