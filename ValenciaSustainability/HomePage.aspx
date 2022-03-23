@@ -189,7 +189,7 @@
                 <asp:TextBox ID="ProjectorWattsUsedTextBox" runat="server" style="z-index: 1; left: 367px; top: 706px; position: absolute; width: 88px">260</asp:TextBox>
                 <asp:TextBox ID="ProjectorTimeUsedTextBox" runat="server" style="z-index: 1; left: 366px; top: 743px; position: absolute; width: 88px">0</asp:TextBox>
                 <asp:TextBox ID="EnergyCostTextBox" runat="server" OnTextChanged="EnergyUseTextBox_TextChanged" style="z-index: 1; left: 641px; top: 774px; position: absolute; width: 88px"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" BackColor="#65C5F3" Font-Bold="True" ForeColor="#0033CC" OnClick="Button1_Click" style="z-index: 1; left: 641px; top: 709px; position: absolute; right: 539px" Text="Calculate" />
+                <asp:Button ID="Button1" runat="server" BackColor="#65C5F3" Font-Bold="True" ForeColor="#0033CC" OnClick="Button1_Click" style="z-index: 1; width: 88px; left: 641px; top: 709px; position: absolute; right: 539px" Text="Calculate" />
             </h1>
             <br />
 
