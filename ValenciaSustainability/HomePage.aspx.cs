@@ -9,15 +9,17 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 
-// July18th2017CommitTest This is a New Change
-// September 6th CommitTest This is a New Change
+//October 4rth 2017. This is a new version of my program!
 
 namespace ValenciaSustainability
 {
 
     public partial class HomePage : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaSustainabilityDatabaseConnectionString2"].ConnectionString);
+        //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ConnectionString);
+
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ValenciaLocalDBConnectionString"].ConnectionString);
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -2088,10 +2090,10 @@ namespace ValenciaSustainability
         }
 
         string myGuid = Guid.NewGuid().ToString() + ".jpg";
-           
+
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-           
+
 
             // Response.Write("This is myGuid Value !  " + myGuid);
 
@@ -2114,7 +2116,7 @@ namespace ValenciaSustainability
             else
             {
                 // Response.Write("Please select a file to upload.");
-                
+
             }
 
             Save();
@@ -2281,7 +2283,7 @@ namespace ValenciaSustainability
                     RoomListBox.DataSource = SelectRoomsDs;
                     RoomListBox.DataTextField = "RoomNumber";
                     RoomListBox.DataValueField = "RoomID";
-                    RoomListBox.DataBind();                
+                    RoomListBox.DataBind();
                     RoomListBox.SelectedIndex = 0;
                 }
             }
@@ -2492,18 +2494,18 @@ namespace ValenciaSustainability
         public void SaveImage(string myString)
         {
 
-        // THIS IS THE PATH FOR AN IMAGE
-        // http://localhost:56840/Data/7567f9ab-a5af-4cab-9837-d4059a7df7f4.jpg
+            // THIS IS THE PATH FOR AN IMAGE
+            // http://localhost:56840/Data/7567f9ab-a5af-4cab-9837-d4059a7df7f4.jpg
 
-             String myImageLink = "";
-
-
-             //String myImageLink = "<a href='http://localhost:56840/Data/" + myGuid + "'>hyperlink</a>";
+            String myImageLink = "";
 
 
-             myImageLink = string.Format("<a href=http://localhost:56840/Data/{0}>putFriendlyNameHere</a>", myGuid);
+            //String myImageLink = "<a href='http://localhost:56840/Data/" + myGuid + "'>hyperlink</a>";
 
-      
+
+            myImageLink = string.Format("<a href=http://localhost:56840/Data/{0}>putFriendlyNameHere</a>", myGuid);
+
+
             if (Request.QueryString["auditid"] == null)
             {
                 // We are inserting

@@ -23,7 +23,7 @@
             <asp:ListItem>SPS</asp:ListItem>
             <asp:ListItem>District Office</asp:ListItem>
         </asp:DropDownList>
-        <asp:SqlDataSource ID="Campus" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [CampusName] FROM [Campus]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="Campus" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [CampusName] FROM [Campus]"></asp:SqlDataSource>
         <asp:Label ID="BuildingLabel" runat="server" style="z-index: 1; left: 299px; top: 93px; position: absolute; font-weight: 700; right: 842px;" Text="Building"></asp:Label>
         <asp:Label ID="CampusLabel" runat="server" style="z-index: 1; left: 47px; top: 93px; position: absolute; font-weight: 700;" Text="Campus"></asp:Label>
         <asp:TextBox ID="LabRoomTextBox" runat="server" OnTextChanged="LabRoomTextBox_TextChanged1" style="z-index: 1; left: 548px; top: 125px; position: absolute; width: 125px;"></asp:TextBox>

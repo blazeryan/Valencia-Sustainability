@@ -11,7 +11,7 @@
     <div>
     
     </div>
-        <asp:SqlDataSource ID="GridViewAuditsSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaSustainabilityDatabaseConnectionString2 %>" SelectCommand="SELECT [AuditID], [AuditDate], [AuditName], [CampusName], [BuildingName], [RoomName] FROM [Audit]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="GridViewAuditsSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ValenciaLocalDBConnectionString %>" SelectCommand="SELECT [AuditID], [AuditDate], [AuditName], [CampusName], [BuildingName], [RoomName] FROM [Audit]"></asp:SqlDataSource>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="AuditID" DataSourceID="GridViewAuditsSqlDataSource" Height="600px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="#CEE8FA" />
             <Columns>
